@@ -6,10 +6,10 @@ In this project, we study the routing of delivery trucks for Lablebi, a popular 
 
 ### Decision Variables
 
-- Let \( x_{ij}^k \in \{0, 1\} \) be a binary variable:
-  - \( x_{ij}^k = 1 \): if vehicle \( k \) travels directly from node \( i \) to node \( j \),
-  - \( x_{ij}^k = 0 \): otherwise.
-- Let \( u_i \) be a continuous variable representing the cumulative demand served upon reaching node \( i \).
+- \( x_{ij}^k \in \{0, 1\} \): Binary variable:
+  - \( x_{ij}^k = 1 \): Vehicle \( k \) travels directly from node \( i \) to node \( j \).
+  - \( x_{ij}^k = 0 \): Otherwise.
+- \( u_i \): Continuous variable representing the cumulative demand served upon reaching node \( i \).
 
 
 ### Mathematical Model
