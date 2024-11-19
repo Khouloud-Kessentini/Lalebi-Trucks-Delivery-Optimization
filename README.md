@@ -14,43 +14,60 @@ In this project, we study the routing of delivery trucks for Lablebi, a popular 
 ### Mathematical Model
 
 **Objective Function**:
-$$
+
+\[
 \min \sum_{k = 1}^{|K|} \sum_{i = 0}^{|N|} \sum_{j = 0}^{|N|} d_{ij}x_{ij}^k
-$$
+\]
 
 **Subject to**:
+
 1. **Flow conservation**:
-   $$
-   \sum_{i = 0}^{|N|} x_{ij}^k = \sum_{i = 0}^{|N|} x_{ji}^k, \quad \forall j \in N, \enspace k \in K
-   $$
+
+\[
+\sum_{i = 0}^{|N|} x_{ij}^k = \sum_{i = 0}^{|N|} x_{ji}^k, \quad \forall j \in N, \enspace k \in K
+\]
+
 2. **Every node is visited exactly once**:
-   $$
-   \sum_{k = 1}^{|K|} \sum_{i = 0}^{|N|} x_{ij}^k = 1, \quad \forall j \in N \setminus \{0\}
-   $$
+
+\[
+\sum_{k = 1}^{|K|} \sum_{i = 0}^{|N|} x_{ij}^k = 1, \quad \forall j \in N \setminus \{0\}
+\]
+
 3. **Each vehicle departs from the depot once**:
-   $$
-   \sum_{j = 1}^{|N|} x_{0j}^k = 1, \quad \forall k \in K
-   $$
+
+\[
+\sum_{j = 1}^{|N|} x_{0j}^k = 1, \quad \forall k \in K
+\]
+
 4. **Vehicle capacity constraint**:
-   $$
-   \sum_{i = 0}^{|N|} \sum_{j = 1}^{|N|} q_{j} x_{ij}^k \leq Q, \quad \forall k \in K
-   $$
+
+\[
+\sum_{i = 0}^{|N|} \sum_{j = 1}^{|N|} q_{j} x_{ij}^k \leq Q, \quad \forall k \in K
+\]
+
 5. **No self-loops**:
-   $$
-   x_{ii}^k = 0, \quad \forall k \in K, \enspace i \in N
-   $$
+
+\[
+x_{ii}^k = 0, \quad \forall k \in K, \enspace i \in N
+\]
+
 6. **Subtour elimination**:
-   $$
-   u_{j} - u_{i} \geq q_{j} - Q(1 - x_{ij}^k), \quad \forall i, j \in N \setminus \{0\}, \enspace i \neq j
-   $$
+
+\[
+u_{j} - u_{i} \geq q_{j} - Q(1 - x_{ij}^k), \quad \forall i, j \in N \setminus \{0\}, \enspace i \neq j
+\]
+
 7. **Cumulative demand bounds**:
-   $$
-   q_{i} \leq u_{i} \leq Q, \quad \forall i \in N \setminus \{0\}
-   $$
+
+\[
+q_{i} \leq u_{i} \leq Q, \quad \forall i \in N \setminus \{0\}
+\]
+
 8. **Binary decision variables**:
-   $$
-   x_{ij}^k \in \{0, 1\}, \quad \forall i, j \in N, \enspace k \in K
-   $$
+
+\[
+x_{ij}^k \in \{0, 1\}, \quad \forall i, j \in N, \enspace k \in K
+\]
 
 ---
 
