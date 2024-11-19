@@ -1,11 +1,8 @@
 # Lalebi-Trucks-Delivery-Optimization
 
-In this project
-
-## Problem Formulation
-
 In this project, we study the routing of delivery trucks for Lablebi, a popular and incredibly delicious Tunisian dish. Since Lablebi is best enjoyed hot, it is essential to optimize the routing for maximum efficiency. The routing task in this project is formulated as a Capacitated Vehicle Routing Problem (CVRP) and is expressed through the following mathematical model.
 
+## Problem Formulation
 
 ### Decision Variables
 
