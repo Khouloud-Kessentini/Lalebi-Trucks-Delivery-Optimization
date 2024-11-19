@@ -11,21 +11,27 @@ In this project, we study the routing of delivery trucks for Lablebi, a popular 
 
 ---
 
+<script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
 ### Mathematical Model
 
-**Objective Function**:
+**Objective Function:**
 
 \[
-\min \sum_{k = 1}^{|K|} \sum_{i = 0}^{|N|} \sum_{j = 0}^{|N|} d_{ij}x_{ij}^k
+\min \sum_{k = 1}^{|K|} \sum_{i = 0}^{|N|} \sum_{j = 0}^{|N|} d_{ij} x_{ij}^k
 \]
 
 **Subject to**:
 
 1. **Flow conservation**:
-
 \[
 \sum_{i = 0}^{|N|} x_{ij}^k = \sum_{i = 0}^{|N|} x_{ji}^k, \quad \forall j \in N, \enspace k \in K
 \]
+
+...
+
 
 2. **Every node is visited exactly once**:
 
