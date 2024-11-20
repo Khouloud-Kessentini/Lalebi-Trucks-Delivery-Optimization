@@ -3,7 +3,7 @@ In this project, we study the routing of delivery trucks for Lablebi, a popular 
 
 ### Decision Variables
 
-- $$x_{ij}^k \in \{0, 1\}$$: Binary variable:
+- $$x_{ij}^k \in {0, 1\}$$: Binary variable:
   - $$x_{ij}^k = 1$$: Vehicle $$k$$ travels directly from node $$i$$ to node $$j$$.
   - $$x_{ij}^k = 0$$: Otherwise.
 - $$u_i$$: Continuous variable representing the cumulative demand served upon reaching node $$i$$.
@@ -26,7 +26,7 @@ $$
 3. **Every node is visited exactly once**:
 
 $$
-\sum_{k = 1}^{|K|} \sum_{i = 0}^{|N|} x_{ij}^k = 1, \quad \forall j \in N \setminus \{0\}
+\sum_{k = 1}^{|K|} \sum_{i = 0}^{|N|} x_{ij}^k = 1, \quad \forall j \in N \setminus {0\}
 $$
 
 3. **Each vehicle departs from the depot once**:
@@ -50,19 +50,19 @@ $$
 6. **Subtour elimination**:
 
 $$
-u_{j} - u_{i} \geq q_{j} - Q(1 - x_{ij}^k), \quad \forall i, j \in N \setminus \{0\}, \enspace i \neq j
+u_{j} - u_{i} \geq q_{j} - Q(1 - x_{ij}^k), \quad \forall i, j \in N \setminus {0\}, \enspace i \neq j
 $$
 
 7. **Cumulative demand bounds**:
 
 $$
-q_{i} \leq u_{i} \leq Q, \quad \forall i \in N \setminus \{0\}
+q_{i} \leq u_{i} \leq Q, \quad \forall i \in N \setminus {0\}
 $$
 
 8. **Binary decision variables**:
 
 $$
-x_{ij}^k \in \{0, 1\}, \quad \forall i, j \in N, \enspace k \in K
+x_{ij}^k \in {0, 1\}, \quad \forall i, j \in N, \enspace k \in K
 $$
 
 ---
