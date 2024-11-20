@@ -17,14 +17,13 @@ $$
 **Subject to**:
 
 1. **Flow conservation**:
+
 $$
 \sum_{i = 0}^{|N|} x_{ij}^k = \sum_{i = 0}^{|N|} x_{ji}^k, \quad \forall j \in N, \enspace k \in K
 $$
 
-...
 
-
-2. **Every node is visited exactly once**:
+3. **Every node is visited exactly once**:
 
 $$
 \sum_{k = 1}^{|K|} \sum_{i = 0}^{|N|} x_{ij}^k = 1, \quad \forall j \in N \setminus \{0\}
@@ -70,13 +69,13 @@ $$
 
 ### Explanation
 
-- **Objective Function**: Minimize the total traveled distance by all vehicles.
-- **Constraints**:
-  1. **Flow conservation** ensures that for each node, the number of incoming routes equals the number of outgoing routes for every vehicle.
-  2. **Unique visit** ensures that every node (except the depot) is visited exactly once by a single vehicle.
-  3. **Depot departure** guarantees that each vehicle starts its route from the depot.
-  4. **Capacity constraint** ensures that the total demand served by each vehicle does not exceed its capacity $$ Q $$.
-  5. **No self-loops** prevents vehicles from traveling directly from a node to itself.
-  6. **Subtour elimination** avoids infeasible sub-routes using the cumulative demand variables $$ u_i $$.
-  7. **Demand bounds** ensure that cumulative demand respects the node demands $$ q_i $$ and vehicle capacity $$ Q $$.
-  8. **Binary variables** specify whether an edge is traversed by a vehicle.
+* **Objective Function**: Minimize the total traveled distance by all vehicles.
+* **Constraints**:
+  - **Flow conservation** ensures that for each node, the number of incoming routes equals the number of outgoing routes for every vehicle.
+  - **Unique visit** ensures that every node (except the depot) is visited exactly once by a single vehicle.
+  - **Depot departure** guarantees that each vehicle starts its route from the depot.
+  - **Capacity constraint** ensures that the total demand served by each vehicle does not exceed its capacity $$ Q $$.
+  - **No self-loops** prevents vehicles from traveling directly from a node to itself.
+  - **Subtour elimination** avoids infeasible sub-routes using the cumulative demand variables $$ u_i $$.
+  - **Demand bounds** ensure that cumulative demand respects the node demands $$ q_i $$ and vehicle capacity $$ Q $$.
+  - **Binary variables** specify whether an edge is traversed by a vehicle.
