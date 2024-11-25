@@ -90,7 +90,7 @@ Clone the repository :
 
 ```python
 git clone https://github.com/Khouloud-Kessentini/Lalebi-Trucks-Delivery-Optimization.git
-cd Solving-a-Maze-using-Reinforcement-Learning
+cd Lalebi-Trucks-Delivery-Optimization
 ```
 
 Run the script
