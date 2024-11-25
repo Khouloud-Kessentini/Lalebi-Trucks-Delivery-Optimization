@@ -83,3 +83,21 @@ $$
   - **Subtour elimination** avoids infeasible sub-routes using the cumulative demand variables $$u_i$$.
   - **Demand bounds** ensure that cumulative demand respects the node demands $$q_i$$ and vehicle capacity $$Q$$.
   - **Binary variables** specify whether an edge is traversed by a vehicle.
+
+### How to Run
+
+Clone the repository :
+
+```python
+git clone https://github.com/Khouloud-Kessentini/Lalebi-Trucks-Delivery-Optimization.git
+cd Solving-a-Maze-using-Reinforcement-Learning
+```
+
+Run the script
+```python
+python scripts.py
+```
+
+### Contributing
+
+Contributions are welcome ! Feel free to open issues or submit pull requests to improve this project.
